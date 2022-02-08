@@ -1,5 +1,7 @@
 package com.javaDay5;
 
+import java.util.*;
+
 public class ReverseString {
 	public static void main(String[] args) {
 
@@ -13,6 +15,7 @@ public class ReverseString {
 		  }
 
 		  System.out.println(revString);
-		 }
+		  
+	}
 
 }
