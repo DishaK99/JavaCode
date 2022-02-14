@@ -21,6 +21,7 @@ public class CombineString {
 			System.out.println("After concatenation : "+str1.concat(str2));
 		};
 		c.combineS(s1, s2);
+		
 	}
 
 }

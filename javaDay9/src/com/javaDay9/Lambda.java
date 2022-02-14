@@ -29,7 +29,7 @@ public class Lambda {
 		//storing the value into a variable
 		int a=10;
 		int b=10;
-		System.out.println(a);
+		//System.out.println(a);
 		
 		//java 8 allows to store code(Function) into a variable
 		//pass the function to java code
@@ -59,31 +59,10 @@ public class Lambda {
 			}
 			
 		};
-		System.out.println(evenOrOddValue(10));
+		System.out.println(evenOrOdd.findValue(10));
 		
 	}
-	public static String evenOrOddValue(int a)
-	{
-		if(a%2==0)
-		{
-			return "Even "+a;
-		}
-		else
-		{
-			return "Odd "+a;
-		}
-		
-	}
-	public void sum(int a, int b)
-	{
-		int c=a+b;
-		System.out.println(c);
-	}
-	public void print()
-	{
-		System.out.println("My method");
-		
-	}
+	
 	
 
 }

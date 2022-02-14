@@ -14,13 +14,13 @@ import java.util.*;
 //Press 6 for print the size
 //Press 7 for Exit
 
-class Student implements Comparator<Student>
+class Student
 {
 	
 	int rollno;
 	String firstName, lastName, school;
 	public Student(int rollno, String firstName, String lastName, String school) {
-		super();
+		//super();
 		this.rollno = rollno;
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -55,23 +55,7 @@ class Student implements Comparator<Student>
 	public String toString() {
 		return "Student [RollNo=" + rollno + ", First Name=" + firstName + ", Last Name= "+lastName+", School= "+school+ "]";
 	}
-	@Override
-	public int compare(Student o1, Student o2) {
-		if(o1.getRollno()>o2.getRollno())
-		{
-		return 1;
-		
-		}
-		else if(o1.getRollno() <o2.getRollno())
-		{
-		 return -1;
-		 
-		}
-		else
-		{
-		return 0;	
-		}
-	}
+	
 	
 	
 }
@@ -192,8 +176,6 @@ public class StudentManagement
 			}
 			else if(choice==4)
 			{
-				
-			//	Collections.sort(s,new Student());
 								
 			}
 			else if(choice==5)
