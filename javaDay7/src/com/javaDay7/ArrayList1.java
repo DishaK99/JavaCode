@@ -10,10 +10,5 @@ public class ArrayList1 {
 		  list.add("Pqr");    
 		  list.add("Aaa");    
 		  
-		  Iterator itr=list.iterator();  
-		  while(itr.hasNext()){  
-		   System.out.println(itr.next());  
-		  }  
-		 }  
-
+	}
 }

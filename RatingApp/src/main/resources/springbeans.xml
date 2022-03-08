@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+ <bean id="user" class="CaseStudy3.RatingApp.User">
+<property name="userName" value="Paul Potter"/>
+<property name="emailID" value="paul@gmail.com"/>
+<property name="password" value="paul"/>
+<property name="mobileNo" value="123345"/>
+</bean>
+
+<bean id="comment" class="CaseStudy3.RatingApp.Comment">
+<property name="commentId" value="01"/>
+<property name="commentText" value="Great"/>
+<property name="likes" value="150"/>
+<property name="dislikes" value="20"/>
+<property name="report" value="false"/>
+</bean>
+
+<bean id="comment1" class="CaseStudy3.RatingApp.Comment">
+<property name="commentId" value="02"/>
+<property name="commentText" value="Good"/>
+<property name="likes" value="100"/>
+<property name="dislikes" value="50"/>
+<property name="report" value="false"/>
+</bean>
+
+<bean id="comment2" class="CaseStudy3.RatingApp.Comment">
+<property name="commentId" value="3"/>
+<property name="commentText" value="Great"/>
+<property name="likes" value="170"/>
+<property name="dislikes" value="70"/>
+<property name="report" value="true"/>
+</bean>
+
+<bean id="comment3" class="CaseStudy3.RatingApp.Comment">
+<property name="commentId" value="04"/>
+<property name="commentText" value="Nice"/>
+<property name="likes" value="1000"/>
+<property name="dislikes" value="80"/>
+<property name="report" value="false"/>
+</bean>
+
+<bean id="review" class="CaseStudy3.RatingApp.Review">
+<property name="reviewId" value="01"/>
+<property name="financialProductReviewed" value="Completed"/>
+<property name="reviewedText" value="Nice"/>
+<property name="comments">
+<list>
+<ref bean="comment1"/>
+<ref bean="comment2"/>
+<ref bean="comment3"/>
+</list>
+</property>
+</bean>
+
+<bean id="financialproduct" class="CaseStudy3.RatingApp.FinancialProduct">
+<property name="productID" value="101"></property>
+<property name="productName" value="Laptop" />
+<property name="description" value="Good Product"/>
+<property name="rating" value="4"/>
+<constructor-arg ref="review" />
+</bean>
+
+
+</beans>
